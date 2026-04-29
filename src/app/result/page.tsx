@@ -26,7 +26,12 @@ export default function ResultPage() {
 
         {/* PDF 생성 및 차트 영역 */}
         <div className="mt-10">
-          <ReportGenerator data={testScores} />
+          <ReportGenerator 
+  data={{
+    ...testScores,
+    memory: testScores.registration // 기억등록 점수를 memory 항목으로 연결
+  }} 
+/>
         </div>
 
         {/* 공유 유도 (기획서 4번 User Flow 반영) */}
