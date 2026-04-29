@@ -7,12 +7,15 @@ import html2canvas from 'html2canvas';
 import jsPDF from 'jspdf';
 
 interface ReportProps {
+  interface ReportGeneratorProps {
   data: {
     orientation: number;
-    memory: number;
+    registration: number;
     fluency: number;
     recall: number;
+    memory?: number; // ?를 붙여서 필수 항목이 아니라고 알려줍니다.
   };
+}
   brainAge: number;
   status: string;
 }
