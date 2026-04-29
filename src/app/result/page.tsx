@@ -28,8 +28,11 @@ export default function ResultPage() {
         <div className="mt-10">
           <ReportGenerator 
   data={{
-    ...testScores,
-    memory: testScores.registration // 기억등록 점수를 memory 항목으로 연결
+    orientation: testScores.orientation,
+    registration: testScores.registration,
+    memory: testScores.registration, // registration 점수를 memory로도 사용
+    fluency: testScores.fluency,
+    recall: testScores.recall
   }} 
 />
         </div>
